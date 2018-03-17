@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>{{ server.name }}</h1>
+    <div>
+        <div>
+            <div>Docker info:</div>
+            <div><pre><code class="bash hljs">{{ info }}</code></pre></div>
+        </div>
+        <div>
+            <div>Docker Images:</div>
+            <div><pre><code class="bash hljs">{{ images }}</code></pre></div>
+        </div>
+        <div>
+            <div>Docker Containers:</div>
+            <div><pre><code class="bash hljs">{{ containers }}</code></pre></div>
+        </div>
+    </div>
+{% endblock %}
