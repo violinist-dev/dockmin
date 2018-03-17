@@ -27,6 +27,8 @@ jobs:
           - v1-dependencies-
 
       - run: composer install -n --prefer-dist
+      - run: sudo apt install -y php-zip
+      - run: sudo apt install -y php-sodium
 
       - save_cache:
           paths:
