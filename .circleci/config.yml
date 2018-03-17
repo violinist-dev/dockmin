@@ -27,8 +27,9 @@ jobs:
           - v1-dependencies-
 
       - run: composer install -n --prefer-dist
-      - run: sudo apt install -y php-zip
-      - run: sudo apt install -y php-sodium
+      - run: sudo apt install libzip-dev
+      - run: sudo docker-php-ext-configure zip
+      - run: sudo docker-php-ext-install zip
 
       - save_cache:
           paths:
@@ -36,5 +37,4 @@ jobs:
           key: v1-dependencies-{{ checksum "composer.json" }}
 
       # run tests!
-      - run: chmod +x bin/phpunit
-      - run: bin/phpunit
+      - run: php bin/phpunit
