@@ -26,15 +26,16 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: composer install -n --prefer-dist
       - run: sudo apt install libzip-dev
       - run: sudo docker-php-ext-configure zip
       - run: sudo docker-php-ext-install zip
 
-      # run tests!
-      - run: php bin/phpunit
+      - run: composer install -n --prefer-dist
 
       - save_cache:
           paths:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
+
+      # run tests!
+      - run: php bin/phpunit
