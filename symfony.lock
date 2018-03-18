@@ -125,6 +125,9 @@
     "symfony/asset": {
         "version": "v4.0.4"
     },
+    "symfony/browser-kit": {
+        "version": "v4.0.6"
+    },
     "symfony/cache": {
         "version": "v4.0.4"
     },
@@ -139,6 +142,9 @@
             "version": "3.3",
             "ref": "c646e4b71af082e94b5014daca36ef6812bad076"
         }
+    },
+    "symfony/css-selector": {
+        "version": "v4.0.6"
     },
     "symfony/debug": {
         "version": "v4.0.4"
@@ -160,6 +166,9 @@
     },
     "symfony/doctrine-bridge": {
         "version": "v4.0.4"
+    },
+    "symfony/dom-crawler": {
+        "version": "v4.0.6"
     },
     "symfony/dotenv": {
         "version": "v4.0.4"
@@ -255,7 +264,7 @@
         "version": "v1.7.0"
     },
     "symfony/process": {
-        "version": "v4.0.5"
+        "version": "v4.0.6"
     },
     "symfony/profiler-pack": {
         "version": "v1.0.3"
