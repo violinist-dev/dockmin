@@ -26,7 +26,7 @@ class WebTestCase extends WTC
     /**
      * Performs a login for a given user.
      */
-    protected function logIn($username = 'admin', array $roles = ['ROLE_AUTHENTICATED'])
+    protected function logIn($username = 'test_user', array $roles = ['ROLE_AUTHENTICATED'])
     {
         $session = $this->client->getContainer()->get('session');
 
