@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+use App\Entity\Project;
 
 /**
  * Class DockerComposeConnection.
@@ -10,10 +11,13 @@ namespace App;
 class DockerComposeConnection extends SSHConnection
 {
 
+    /**
+     * @var Project|null
+     */
     protected $project;
 
     /**
-     * @return mixed
+     * @return Project
      */
     public function getProject()
     {
@@ -21,21 +25,18 @@ class DockerComposeConnection extends SSHConnection
     }
 
     /**
-     * @param mixed $project
+     * @param project $project
      */
-    public function setProject($project): void
+    public function setProject(Project $project): void
     {
         $this->project = $project;
     }
 
-
     public function up()
     {
-
     }
 
     public function down()
     {
-
     }
 }
