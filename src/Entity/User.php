@@ -232,4 +232,12 @@ class User implements AdvancedUserInterface, \Serializable
         return $this->isActive;
     }
 
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->username;
+    }
+
 }

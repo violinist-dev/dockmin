@@ -3,11 +3,10 @@
 namespace App\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Client;
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase as WTC;
 use Symfony\Component\BrowserKit\Cookie;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
-class WebTestCase extends WTC
+abstract class WebTestCase extends KernelTestCase
 {
 
     /**
@@ -21,6 +20,24 @@ class WebTestCase extends WTC
     public function setUp()
     {
         $this->client = static::createClient();
+    }
+
+    /**
+     * Creates a Client.
+     *
+     * @param array $options An array of options to pass to the createKernel class
+     * @param array $server  An array of server parameters
+     *
+     * @return Client A Client instance
+     */
+    protected static function createClient(array $options = array(), array $server = array())
+    {
+        $kernel = static::bootKernel($options);
+
+        $client = $kernel->getContainer()->get('test.client');
+        $client->setServerParameters($server);
+
+        return $client;
     }
 
     /**

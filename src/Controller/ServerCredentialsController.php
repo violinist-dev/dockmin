@@ -59,13 +59,12 @@ class ServerCredentialsController extends Controller
 
             $current_password = $form->get('currentPassword')->getData();
 
-            $key = KeyFactory::deriveEncryptionKey(new HiddenString($current_password), $server_credential->getEncryptionSalt());
-            $server_credential->setCredentials(SymmetricCrypto::encrypt(new HiddenString(json_encode($credentials)), $key));
             $server_credential->setOwner($this->getUser());
             $em = $this->getDoctrine()->getManager();
             $em->persist($server_credential);
             $em->flush();
 
+            $this->getDoctrine()->getRepository(User::class)->encryptServerCredential($current_password, $this->getUser(), $credentials, $server_credential);
             $this->getDoctrine()->getRepository(User::class)->loadServerCredentials($current_password, $this->getUser());
 
             return $this->redirectToRoute('server_credentials_index');

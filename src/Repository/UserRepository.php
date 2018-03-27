@@ -69,7 +69,7 @@ class UserRepository extends ServiceEntityRepository
     }
 
     /**
-     * Encrypt all the existing credentials wiht the provided password.
+     * Encrypt all the existing credentials with the provided password.
      *
      * @param $password
      *   The userpassword, used for encrypting the credentials.
@@ -98,6 +98,33 @@ class UserRepository extends ServiceEntityRepository
             $em->persist($server_credential);
         }
 
+        $em->flush();
+        $this->loadServerCredentials($password, $user);
+    }
+
+    /**
+     * Saves the credentials for a single ServerCredential entity.
+     *
+     * @param string $password
+     * @param User $user
+     * @param array $credential
+     * @param ServerCredential $server_credential
+     *
+     * @throws \ParagonIE\Halite\Alerts\CannotPerformOperation
+     * @throws \ParagonIE\Halite\Alerts\InvalidDigestLength
+     * @throws \ParagonIE\Halite\Alerts\InvalidKey
+     * @throws \ParagonIE\Halite\Alerts\InvalidMessage
+     * @throws \ParagonIE\Halite\Alerts\InvalidSalt
+     * @throws \ParagonIE\Halite\Alerts\InvalidType
+     * @throws \TypeError
+     * @throws \ParagonIE\Halite\Alerts\InvalidSignature
+     */
+    public function encryptServerCredential($password, User $user, array $credential, ServerCredential $server_credential)
+    {
+        $em = $this->doctrine->getManager();
+        $key = KeyFactory::deriveEncryptionKey(new HiddenString($password), $server_credential->getEncryptionSalt());
+        $server_credential->setCredentials(SymmetricCrypto::encrypt(new HiddenString(json_encode($credential)), $key));
+        $em->persist($server_credential);
         $em->flush();
         $this->loadServerCredentials($password, $user);
     }
