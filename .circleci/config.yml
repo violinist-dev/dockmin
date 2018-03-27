@@ -27,8 +27,7 @@ jobs:
           - v1-dependencies-
 
       - run: sudo apt install libzip-dev libsodium-dev
-      - run: sudo docker-php-ext-install zip
-      - run: sudo docker-php-ext-install sodium
+      - run: sudo docker-php-ext-install -j$(nproc) zip sodium
 
       - run: composer install -n --prefer-dist
 
