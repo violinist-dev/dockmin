@@ -16,7 +16,7 @@ class Kernel extends BaseKernel
 
     public function getCacheDir()
     {
-        return '/dev/shm/dockmin/cache/'.$this->environment;
+        return $this->getProjectDir().'/var/cache/'.$this->environment;
     }
 
     public function getLogDir()

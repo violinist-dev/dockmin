@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\DockerConnection;
+use App\DockerConnectionInterface;
 use App\Form\ServerType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -38,7 +39,7 @@ class ServerController extends Controller
      * @Route("/add", name="server_add")
      * @Template()
      */
-    public function add(Request $request, DockerConnection $dc)
+    public function add(Request $request, DockerConnectionInterface $dc)
     {
         $server = new Server();
         $form = $this->createForm(ServerType::class, $server);
@@ -49,19 +50,14 @@ class ServerController extends Controller
             $server = $form->getData();
             $server->setOwner($this->getUser());
 
-            try {
-                $dc->connect($server);
-                $docker_info = $dc->info();
-                $server->setDockerInfo($docker_info);
-                $server->setOs($docker_info['os']);
-                $em = $this->getDoctrine()->getManager();
-                $em->persist($server);
-                $em->flush();
-                return $this->redirectToRoute('server_index');
-            }
-            catch (\ErrorException $exception) {
-                $form->addError(new FormError($exception->getMessage()));
-            }
+            $dc->connect($server);
+            $docker_info = $dc->info();
+            $server->setDockerInfo($docker_info);
+            $server->setOs($docker_info['os']);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($server);
+            $em->flush();
+            return $this->redirectToRoute('server_index');
         }
 
         return ['form' => $form->createView()];
@@ -72,7 +68,7 @@ class ServerController extends Controller
      * @Route("/edit/{server}", name="server_edit")
      * @Template()
      */
-    public function edit(Request $request, Server $server, DockerConnection $dc)
+    public function edit(Request $request, Server $server, DockerConnectionInterface $dc)
     {
         $form = $this->createForm(ServerType::class, $server);
 
@@ -81,19 +77,16 @@ class ServerController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             /** @var Server $server */
             $server = $form->getData();
-            try {
-                $dc->connect($server);
-                $docker_info = $dc->info();
-                $server->setDockerInfo($docker_info);
-                $server->setOs($docker_info['os']);
-                $em = $this->getDoctrine()->getManager();
-                $em->persist($server);
-                $em->flush();
-                return $this->redirectToRoute('server_index');
-            }
-            catch (\ErrorException $exception) {
-                $form->addError(new FormError($exception->getMessage()));
-            }
+
+            $dc->connect($server);
+            $docker_info = $dc->info();
+            $server->setDockerInfo($docker_info);
+            $server->setOs($docker_info['os']);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($server);
+            $em->flush();
+
+            return $this->redirectToRoute('server_index');
         }
 
         return ['form' => $form->createView(), 'server' => $server];
@@ -126,7 +119,7 @@ class ServerController extends Controller
      * @Route("/view/{server}", name="server_view")
      * @Template()
      */
-    public function view(Request $request, Server $server, DockerConnection $docker_connection)
+    public function view(Request $request, Server $server, DockerConnectionInterface $docker_connection)
     {
         $docker_connection->connect($server);
         return [

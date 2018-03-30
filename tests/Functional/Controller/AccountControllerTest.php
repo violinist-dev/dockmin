@@ -17,4 +17,11 @@ class AccountControllerTest extends WebTestCase
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
     }
 
+    public function testEdit()
+    {
+        $this->logIn();
+        $this->client->request('GET', '/account/edit');
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+    }
+
 }

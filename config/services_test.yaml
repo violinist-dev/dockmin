@@ -7,3 +7,9 @@ services:
     # aliases are prefixed with test. For example:
     #
     # test.App\Service\MyService: '@App\Service\MyService'
+
+
+    # We can not expect the test to have connection to actual servers, so we exchange the Docker Connection service
+    # with one that only returns known values.
+    App\DockerConnection:
+        class: App\Tests\DockerConnection

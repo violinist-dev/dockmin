@@ -14,6 +14,6 @@
         <input type="hidden" name="_target_path" value="/server" />
 
         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-        <button type="submit">login</button>
+        <button id="login-submit" type="submit">login</button>
     </form>
 {% endblock %}

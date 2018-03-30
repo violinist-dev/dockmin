@@ -30,6 +30,7 @@ class UserRepositoryTest extends KernelTestCase
     public function setUp()
     {
         parent::setUp();
+        parent::initDB();
 
         $this->user_repo = $this->entityManager
             ->getRepository(User::class);
@@ -86,18 +87,22 @@ class UserRepositoryTest extends KernelTestCase
      */
     public function testLoadServerCredentials()
     {
-        $kernel = self::$kernel;
         $this->generateCredentials();
         $this->user_repo->loadServerCredentials($this->password, $this->user);
-        $this->assertCount(4, $kernel->getContainer()->get('session')->get('credentials'));
+        $this->assertCount(4, self::$kernel->getContainer()->get('session')->get('credentials'));
     }
 
     /**
      * Generate a series of server credential entities.
      *
+     * @param int $count
+     *
      * @return array
+     *
+     * @throws \TypeError
      */
-    private function generateCredentials($count = 4){
+    private function generateCredentials($count = 4)
+    {
         $credentials = [];
         for ($i = 0; $i < $count; $i++) {
             $server_credential = new ServerCredential();

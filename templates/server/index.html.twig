@@ -21,9 +21,9 @@
                 <th scope="row">{{ server.ip }}</th>
                 <td>{{ server.name }}</td>
                 <td>{{ server.updated|date("d-m-Y h:i") }}</td>
-                <td>{{ server.os }}</td>
-                <td>{{ server.dockerinfo.version }}</td>
-                <td>{{ server.serverCredential.name }}</td>
+                <td>{{ server.os|default('N/A') }}</td>
+                <td>{{ server.dockerinfo.version|default('N/A') }}</td>
+                <td>{{ server.serverCredential.name|default('No credentials set') }}</td>
                 <td>{{ server.active }}</td>
                 <td>
                     <ul>
