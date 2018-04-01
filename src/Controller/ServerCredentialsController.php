@@ -60,6 +60,8 @@ class ServerCredentialsController extends Controller
             $current_password = $form->get('currentPassword')->getData();
 
             $server_credential->setOwner($this->getUser());
+            // Temporarily set credentials to an empty string.
+            $server_credential->setCredentials('');
             $em = $this->getDoctrine()->getManager();
             $em->persist($server_credential);
             $em->flush();
