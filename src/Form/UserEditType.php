@@ -23,6 +23,7 @@ class UserEditType extends AbstractType
             ->add('currentPassword', PasswordType::class, ['mapped' => false, 'constraints' => new UserPassword()])
             ->add('plainPassword', RepeatedType::class, [
                 'type' => PasswordType::class,
+                'required' => false,
                 'first_options'  => ['label' => 'Password'],
                 'second_options' => ['label' => 'Repeat Password'],
             ])
