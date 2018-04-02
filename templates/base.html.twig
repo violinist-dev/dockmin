@@ -14,13 +14,12 @@
     </head>
     <body>
     {% include 'menu.html.twig' %}
-
     <div class="container">
         {% block body %}{% endblock %}
         <footer>
-            <p>&copy; Company 2017</p>
+            <p>Dockmin version <a target="_blank" rel="noopener noreferrer" href="https://github.com/TLyngeJ/dockmin/tree/{{ version }}">{{ version }}</a></p>
         </footer>
-    </div> <!-- /container -->
+    </div>
         {% block javascripts %}
             <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
