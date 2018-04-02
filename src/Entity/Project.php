@@ -29,6 +29,11 @@ class Project
     private $updated;
 
     /**
+     * @ORM\ManyToOne(targetEntity="User")
+     */
+    private $owner;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Server")
      */
     private $server;
@@ -109,6 +114,22 @@ class Project
     public function getUpdated()
     {
         return $this->updated;
+    }
+
+    /**
+     * @return User
+     */
+    public function getOwner()
+    {
+        return $this->owner;
+    }
+
+    /**
+     * @param User $owner
+     */
+    public function setOwner(User $owner): void
+    {
+        $this->owner = $owner;
     }
 
 }

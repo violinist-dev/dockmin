@@ -2,13 +2,11 @@
 
 namespace App\Controller;
 
-use App\DockerConnection;
 use App\DockerConnectionInterface;
 use App\Form\ServerType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\FormError;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use App\Entity\Server;
@@ -52,6 +50,7 @@ class ServerController extends Controller
 
             $dc->connect($server);
             $docker_info = $dc->info();
+
             $server->setDockerInfo($docker_info);
             $server->setOs($docker_info['os']);
             $em = $this->getDoctrine()->getManager();
@@ -76,10 +75,9 @@ class ServerController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             /** @var Server $server */
-            $server = $form->getData();
+            $server = $form->getData();$dc->connect($server);
+                $docker_info = $dc->info();
 
-            $dc->connect($server);
-            $docker_info = $dc->info();
             $server->setDockerInfo($docker_info);
             $server->setOs($docker_info['os']);
             $em = $this->getDoctrine()->getManager();

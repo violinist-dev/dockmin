@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    You are about to delete the project named <em>{{ project.name }}</em>. Are you sure?<br />
+    This can not be undone!
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock %}
