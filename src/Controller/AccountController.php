@@ -37,23 +37,35 @@ class AccountController extends Controller
      */
     public function edit(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
+        /** @var User $user */
         $user = $this->getUser();
+        $originalPassword = $user->getPassword();
+
         $form = $this->createForm(UserEditType::class, $user);
+
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $user = $form->getData();
             $current_password = $form->get('currentPassword')->getData();
+            $plainPassword = $form->get('plainPassword')->getData();
 
-            $password = $passwordEncoder->encodePassword($user, $user->getPlainPassword());
-            $user->setPassword($password);
+            if (!empty($plainPassword))  {
+                $password = $passwordEncoder->encodePassword($user, $user->getPlainPassword());
+
+                $user->setPassword($password);
+
+                // Re-load all credentials to make sure that we have all of them.
+                $this->getDoctrine()->getRepository(User::class)->loadServerCredentials($current_password, $user);
+                $this->getDoctrine()->getRepository(User::class)->encryptServerCredentials($user->getPlainPassword(), $this->getUser());
+            }
+            else {
+                $user->setPassword($originalPassword);
+            }
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();
-
-            // Re-load all credentials to make sure that we have all of them.
-            $this->getDoctrine()->getRepository(User::class)->loadServerCredentials($current_password, $user);
-            $this->getDoctrine()->getRepository(User::class)->encryptServerCredentials($user->getPlainPassword(), $this->getUser());
+            return $this->redirectToRoute('account_index');
 
         }
         return ['form' => $form->createView()];
