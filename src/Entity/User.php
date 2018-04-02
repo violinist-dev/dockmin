@@ -3,7 +3,8 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Security\Core\User\AdvancedUserInterface;
+use Symfony\Component\Security\Core\User\EquatableInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
@@ -17,7 +18,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @UniqueEntity(fields="email", message="Email already taken")
  * @UniqueEntity(fields="username", message="Username already taken")
  */
-class User implements AdvancedUserInterface, \Serializable
+class User implements UserInterface, \Serializable, EquatableInterface
 {
     /**
      * @ORM\Id
@@ -38,7 +39,6 @@ class User implements AdvancedUserInterface, \Serializable
     private $password;
 
     /**
-     * @Assert\NotBlank()
      * @Assert\Length(max=4096)
      */
     private $plainPassword;
@@ -129,6 +129,22 @@ class User implements AdvancedUserInterface, \Serializable
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function isEqualTo(UserInterface $user)
+    {
+        if ($this->password !== $user->getPassword()) {
+            return false;
+        }
+
+        if ($this->username !== $user->getUsername()) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
      * @return string
      */
     public function getPlainPassword()
@@ -203,31 +219,39 @@ class User implements AdvancedUserInterface, \Serializable
     /**
      * {@inheritdoc}
      */
-    public function isAccountNonExpired()
+    public function isExpired()
     {
-        return true;
+        return false;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function isAccountNonLocked()
+    public function isLocked()
     {
-        return true;
+        return false;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function isCredentialsNonExpired()
+    public function isCredentialsExpired()
     {
-        return true;
+        return false;
     }
 
     /**
      * {@inheritdoc}
      */
     public function isEnabled()
+    {
+        return $this->isActive;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function isActive()
     {
         return $this->isActive;
     }
