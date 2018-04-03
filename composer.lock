@@ -1853,7 +1853,7 @@
         },
         {
             "name": "symfony/asset",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/asset.git",
@@ -2235,16 +2235,16 @@
         },
         {
             "name": "symfony/doctrine-bridge",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/doctrine-bridge.git",
-                "reference": "404becb75de28db14134d662f5b9b78b9a262acb"
+                "reference": "6743ff309bee333f885b237d04e81652f73f51a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/doctrine-bridge/zipball/404becb75de28db14134d662f5b9b78b9a262acb",
-                "reference": "404becb75de28db14134d662f5b9b78b9a262acb",
+                "url": "https://api.github.com/repos/symfony/doctrine-bridge/zipball/6743ff309bee333f885b237d04e81652f73f51a3",
+                "reference": "6743ff309bee333f885b237d04e81652f73f51a3",
                 "shasum": ""
             },
             "require": {
@@ -2310,7 +2310,7 @@
             ],
             "description": "Symfony Doctrine Bridge",
             "homepage": "https://symfony.com",
-            "time": "2018-02-04T13:08:26+00:00"
+            "time": "2018-03-19T22:35:49+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -3144,7 +3144,7 @@
         },
         {
             "name": "symfony/monolog-bridge",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/monolog-bridge.git",
@@ -3776,7 +3776,7 @@
         },
         {
             "name": "symfony/security-csrf",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-csrf.git",
@@ -3903,16 +3903,16 @@
         },
         {
             "name": "symfony/twig-bridge",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/twig-bridge.git",
-                "reference": "575004ae3bcfb7d909a34db20edb7c349defb092"
+                "reference": "7596e74f91d9c2ecb5de35811b87655e9533096f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/twig-bridge/zipball/575004ae3bcfb7d909a34db20edb7c349defb092",
-                "reference": "575004ae3bcfb7d909a34db20edb7c349defb092",
+                "url": "https://api.github.com/repos/symfony/twig-bridge/zipball/7596e74f91d9c2ecb5de35811b87655e9533096f",
+                "reference": "7596e74f91d9c2ecb5de35811b87655e9533096f",
                 "shasum": ""
             },
             "require": {
@@ -3921,7 +3921,7 @@
             },
             "conflict": {
                 "symfony/console": "<3.4",
-                "symfony/form": "<3.4.5|<4.0.5,>=4.0"
+                "symfony/form": "<3.4.7|<4.0.7,>=4.0"
             },
             "require-dev": {
                 "symfony/asset": "~3.4|~4.0",
@@ -3929,7 +3929,7 @@
                 "symfony/dependency-injection": "~3.4|~4.0",
                 "symfony/expression-language": "~3.4|~4.0",
                 "symfony/finder": "~3.4|~4.0",
-                "symfony/form": "^3.4.5|^4.0.5",
+                "symfony/form": "^3.4.7|^4.0.7",
                 "symfony/http-foundation": "~3.4|~4.0",
                 "symfony/http-kernel": "~3.4|~4.0",
                 "symfony/polyfill-intl-icu": "~1.0",
@@ -3989,11 +3989,11 @@
             ],
             "description": "Symfony Twig Bridge",
             "homepage": "https://symfony.com",
-            "time": "2018-03-01T10:21:51+00:00"
+            "time": "2018-04-02T14:06:14+00:00"
         },
         {
             "name": "symfony/twig-bundle",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/twig-bundle.git",
@@ -4694,7 +4694,7 @@
         },
         {
             "name": "symfony/dotenv",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dotenv.git",
@@ -4872,16 +4872,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "6ed08502a7c9559da8e60ea343bdbd19c3350b3e"
+                "reference": "d7dc1ee5dfe9f732cb1bba7310f5b99f2b7a6d25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/6ed08502a7c9559da8e60ea343bdbd19c3350b3e",
-                "reference": "6ed08502a7c9559da8e60ea343bdbd19c3350b3e",
+                "url": "https://api.github.com/repos/symfony/process/zipball/d7dc1ee5dfe9f732cb1bba7310f5b99f2b7a6d25",
+                "reference": "d7dc1ee5dfe9f732cb1bba7310f5b99f2b7a6d25",
                 "shasum": ""
             },
             "require": {
@@ -4917,7 +4917,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-02-19T12:18:43+00:00"
+            "time": "2018-04-03T05:24:00+00:00"
         },
         {
             "name": "symfony/profiler-pack",
@@ -5133,7 +5133,7 @@
         },
         {
             "name": "symfony/web-server-bundle",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/web-server-bundle.git",
