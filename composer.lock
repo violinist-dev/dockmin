@@ -2263,7 +2263,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -2470,16 +2470,16 @@
         },
         {
             "name": "symfony/form",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/form.git",
-                "reference": "26c2749671eb73602b4264e4a3221fb451dbc8d5"
+                "reference": "5a3f505b256a65978d1d4f924ed53ceb503d1d5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/form/zipball/26c2749671eb73602b4264e4a3221fb451dbc8d5",
-                "reference": "26c2749671eb73602b4264e4a3221fb451dbc8d5",
+                "url": "https://api.github.com/repos/symfony/form/zipball/5a3f505b256a65978d1d4f924ed53ceb503d1d5f",
+                "reference": "5a3f505b256a65978d1d4f924ed53ceb503d1d5f",
                 "shasum": ""
             },
             "require": {
@@ -2546,7 +2546,7 @@
             ],
             "description": "Symfony Form Component",
             "homepage": "https://symfony.com",
-            "time": "2018-03-01T10:21:51+00:00"
+            "time": "2018-04-02T10:05:09+00:00"
         },
         {
             "name": "symfony/framework-bundle",
@@ -2803,7 +2803,7 @@
         },
         {
             "name": "symfony/inflector",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/inflector.git",
@@ -2860,16 +2860,16 @@
         },
         {
             "name": "symfony/intl",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/intl.git",
-                "reference": "929953d9e64c7209afb907fc34ac64b135c79cb8"
+                "reference": "d58df88e3cfdb2702f5fd8cd67c33961c2539e0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/intl/zipball/929953d9e64c7209afb907fc34ac64b135c79cb8",
-                "reference": "929953d9e64c7209afb907fc34ac64b135c79cb8",
+                "url": "https://api.github.com/repos/symfony/intl/zipball/d58df88e3cfdb2702f5fd8cd67c33961c2539e0c",
+                "reference": "d58df88e3cfdb2702f5fd8cd67c33961c2539e0c",
                 "shasum": ""
             },
             "require": {
@@ -2931,7 +2931,7 @@
                 "l10n",
                 "localization"
             ],
-            "time": "2018-02-03T00:57:23+00:00"
+            "time": "2018-04-02T09:52:41+00:00"
         },
         {
             "name": "symfony/lts",
@@ -3216,7 +3216,7 @@
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
@@ -3415,7 +3415,7 @@
         },
         {
             "name": "symfony/property-access",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-access.git",
