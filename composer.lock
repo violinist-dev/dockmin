@@ -2057,16 +2057,16 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "1721e4e7effb23480966690cdcdc7d2a4152d489"
+                "reference": "5961d02d48828671f5d8a7805e06579d692f6ede"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/1721e4e7effb23480966690cdcdc7d2a4152d489",
-                "reference": "1721e4e7effb23480966690cdcdc7d2a4152d489",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/5961d02d48828671f5d8a7805e06579d692f6ede",
+                "reference": "5961d02d48828671f5d8a7805e06579d692f6ede",
                 "shasum": ""
             },
             "require": {
@@ -2109,20 +2109,20 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2018-02-28T21:50:02+00:00"
+            "time": "2018-04-03T05:24:00+00:00"
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "93ad14f124beacf16894b64bb5b3cdd5b4367e38"
+                "reference": "9f1cea656afc5512c6f5e58d61fcea12acee113e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/93ad14f124beacf16894b64bb5b3cdd5b4367e38",
-                "reference": "93ad14f124beacf16894b64bb5b3cdd5b4367e38",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/9f1cea656afc5512c6f5e58d61fcea12acee113e",
+                "reference": "9f1cea656afc5512c6f5e58d61fcea12acee113e",
                 "shasum": ""
             },
             "require": {
@@ -2180,7 +2180,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-03-05T18:28:26+00:00"
+            "time": "2018-04-02T09:52:41+00:00"
         },
         {
             "name": "symfony/doctrine-bridge",
@@ -2263,7 +2263,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -2664,16 +2664,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "6c181e81a3a9a7996c62ebd7803592536e729c5a"
+                "reference": "d0864a82e5891ab61d31eecbaa48bed5a09b8e6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/6c181e81a3a9a7996c62ebd7803592536e729c5a",
-                "reference": "6c181e81a3a9a7996c62ebd7803592536e729c5a",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/d0864a82e5891ab61d31eecbaa48bed5a09b8e6c",
+                "reference": "d0864a82e5891ab61d31eecbaa48bed5a09b8e6c",
                 "shasum": ""
             },
             "require": {
@@ -2713,20 +2713,20 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2018-03-05T16:01:10+00:00"
+            "time": "2018-04-03T05:24:00+00:00"
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "2a1ebfe8c37240500befcb17bceb3893adacffa3"
+                "reference": "38337d03a554a2b0e9f553d368723692b7c04a8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/2a1ebfe8c37240500befcb17bceb3893adacffa3",
-                "reference": "2a1ebfe8c37240500befcb17bceb3893adacffa3",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/38337d03a554a2b0e9f553d368723692b7c04a8f",
+                "reference": "38337d03a554a2b0e9f553d368723692b7c04a8f",
                 "shasum": ""
             },
             "require": {
@@ -2799,11 +2799,11 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2018-03-05T22:27:01+00:00"
+            "time": "2018-04-03T06:20:33+00:00"
         },
         {
             "name": "symfony/inflector",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/inflector.git",
@@ -3415,7 +3415,7 @@
         },
         {
             "name": "symfony/property-access",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-access.git",
@@ -3560,16 +3560,16 @@
         },
         {
             "name": "symfony/security",
-            "version": "v3.4.6",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security.git",
-                "reference": "9a9ab07334e511ff205bcf2daea81ccde500f3aa"
+                "reference": "8573c402af86e18e1fd87af3067523370f490342"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security/zipball/9a9ab07334e511ff205bcf2daea81ccde500f3aa",
-                "reference": "9a9ab07334e511ff205bcf2daea81ccde500f3aa",
+                "url": "https://api.github.com/repos/symfony/security/zipball/8573c402af86e18e1fd87af3067523370f490342",
+                "reference": "8573c402af86e18e1fd87af3067523370f490342",
                 "shasum": ""
             },
             "require": {
@@ -3635,20 +3635,20 @@
             ],
             "description": "Symfony Security Component",
             "homepage": "https://symfony.com",
-            "time": "2018-02-23T15:50:25+00:00"
+            "time": "2018-04-02T14:35:16+00:00"
         },
         {
             "name": "symfony/security-bundle",
-            "version": "v4.0.6",
+            "version": "v4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-bundle.git",
-                "reference": "5cbcf5d33261aaa0b5895a253161c6ba32754efd"
+                "reference": "4edcb55716cdbbb26783313f34046ada778c87c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/5cbcf5d33261aaa0b5895a253161c6ba32754efd",
-                "reference": "5cbcf5d33261aaa0b5895a253161c6ba32754efd",
+                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/4edcb55716cdbbb26783313f34046ada778c87c5",
+                "reference": "4edcb55716cdbbb26783313f34046ada778c87c5",
                 "shasum": ""
             },
             "require": {
@@ -3715,7 +3715,7 @@
             ],
             "description": "Symfony SecurityBundle",
             "homepage": "https://symfony.com",
-            "time": "2018-02-19T12:18:43+00:00"
+            "time": "2018-03-19T22:35:49+00:00"
         },
         {
             "name": "symfony/security-csrf",
