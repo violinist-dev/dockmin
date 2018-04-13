@@ -3472,7 +3472,7 @@
         },
         {
             "name": "symfony/property-access",
-            "version": "v4.0.7",
+            "version": "v4.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-access.git",
@@ -3617,16 +3617,16 @@
         },
         {
             "name": "symfony/security",
-            "version": "v3.4.7",
+            "version": "v3.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security.git",
-                "reference": "8573c402af86e18e1fd87af3067523370f490342"
+                "reference": "67aeceb471baf282aadde8e8bc1a8f2320ac8a90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security/zipball/8573c402af86e18e1fd87af3067523370f490342",
-                "reference": "8573c402af86e18e1fd87af3067523370f490342",
+                "url": "https://api.github.com/repos/symfony/security/zipball/67aeceb471baf282aadde8e8bc1a8f2320ac8a90",
+                "reference": "67aeceb471baf282aadde8e8bc1a8f2320ac8a90",
                 "shasum": ""
             },
             "require": {
@@ -3692,20 +3692,20 @@
             ],
             "description": "Symfony Security Component",
             "homepage": "https://symfony.com",
-            "time": "2018-04-02T14:35:16+00:00"
+            "time": "2018-04-06T07:35:25+00:00"
         },
         {
             "name": "symfony/security-bundle",
-            "version": "v4.0.7",
+            "version": "v4.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-bundle.git",
-                "reference": "4edcb55716cdbbb26783313f34046ada778c87c5"
+                "reference": "dfabecc1fd3e626e676edef97753a645b4de85a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/4edcb55716cdbbb26783313f34046ada778c87c5",
-                "reference": "4edcb55716cdbbb26783313f34046ada778c87c5",
+                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/dfabecc1fd3e626e676edef97753a645b4de85a5",
+                "reference": "dfabecc1fd3e626e676edef97753a645b4de85a5",
                 "shasum": ""
             },
             "require": {
@@ -3772,7 +3772,7 @@
             ],
             "description": "Symfony SecurityBundle",
             "homepage": "https://symfony.com",
-            "time": "2018-03-19T22:35:49+00:00"
+            "time": "2018-04-06T07:35:43+00:00"
         },
         {
             "name": "symfony/security-csrf",
