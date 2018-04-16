@@ -26,8 +26,8 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: sudo apt install libzip-dev libsodium-dev
-      - run: sudo docker-php-ext-install -j$(nproc) zip sodium
+      - run: sudo apt install libzip-dev
+      - run: sudo docker-php-ext-install -j$(nproc) zip
 
       - run: composer install -n --prefer-dist
 
