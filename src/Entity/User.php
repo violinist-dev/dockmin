@@ -56,6 +56,13 @@ class User implements UserInterface, \Serializable, EquatableInterface
     private $isActive;
 
     /**
+     * @var null
+     *
+     * We do not need this, as we use bcrypt for password encryption, but keep it for backward compatibility.
+     */
+    private $salt;
+
+    /**
      * User constructor.
      */
     public function __construct()
@@ -138,6 +145,10 @@ class User implements UserInterface, \Serializable, EquatableInterface
         }
 
         if ($this->username !== $user->getUsername()) {
+            return false;
+        }
+
+        if ($this->salt !== $user->getSalt()) {
             return false;
         }
 
