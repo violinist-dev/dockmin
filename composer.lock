@@ -2477,16 +2477,16 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v1.0.78",
+            "version": "v1.0.79",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "eead30b31db70691cd1fd1e7225190c818a1a5f6"
+                "reference": "399e72968d5baa698788e6116fe0f47f269724e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/eead30b31db70691cd1fd1e7225190c818a1a5f6",
-                "reference": "eead30b31db70691cd1fd1e7225190c818a1a5f6",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/399e72968d5baa698788e6116fe0f47f269724e0",
+                "reference": "399e72968d5baa698788e6116fe0f47f269724e0",
                 "shasum": ""
             },
             "require": {
@@ -2519,7 +2519,7 @@
                     "email": "fabien.potencier@gmail.com"
                 }
             ],
-            "time": "2018-03-27T10:04:58+00:00"
+            "time": "2018-04-27T05:19:26+00:00"
         },
         {
             "name": "symfony/form",
@@ -3081,22 +3081,22 @@
         },
         {
             "name": "symfony/maker-bundle",
-            "version": "v1.4.0",
+            "version": "v1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "253cee42124de11dc0a5bb7c91e5375d7197be12"
+                "reference": "8713152f523b337177163a328485ea6a39fae7ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/253cee42124de11dc0a5bb7c91e5375d7197be12",
-                "reference": "253cee42124de11dc0a5bb7c91e5375d7197be12",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/8713152f523b337177163a328485ea6a39fae7ad",
+                "reference": "8713152f523b337177163a328485ea6a39fae7ad",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "^1.2",
                 "nikic/php-parser": "^4.0",
-                "php": "^7.1.3",
+                "php": "^7.0.8",
                 "symfony/config": "^3.4|^4.0",
                 "symfony/console": "^3.4|^4.0",
                 "symfony/dependency-injection": "^3.4|^4.0",
@@ -3108,7 +3108,7 @@
             "require-dev": {
                 "allocine/twigcs": "^3.0",
                 "doctrine/doctrine-bundle": "^1.8",
-                "doctrine/orm": "^2.6",
+                "doctrine/orm": "^2.3",
                 "friendsofphp/php-cs-fixer": "^2.8",
                 "symfony/phpunit-bridge": "^3.4|^4.0",
                 "symfony/process": "^3.4|^4.0"
@@ -3142,7 +3142,7 @@
                 "scaffold",
                 "scaffolding"
             ],
-            "time": "2018-04-11T22:44:12+00:00"
+            "time": "2018-04-19T17:28:47+00:00"
         },
         {
             "name": "symfony/monolog-bridge",
