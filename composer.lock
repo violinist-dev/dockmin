@@ -2380,16 +2380,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.0.10",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "7a69e728e9f0044958c2fd7d72bfe5e7bd1a4d04"
+                "reference": "562bf7005b55fd80d26b582d28e3e10f2dd5ae9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/7a69e728e9f0044958c2fd7d72bfe5e7bd1a4d04",
-                "reference": "7a69e728e9f0044958c2fd7d72bfe5e7bd1a4d04",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/562bf7005b55fd80d26b582d28e3e10f2dd5ae9c",
+                "reference": "562bf7005b55fd80d26b582d28e3e10f2dd5ae9c",
                 "shasum": ""
             },
             "require": {
@@ -2399,7 +2399,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -2426,7 +2426,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2018-05-16T09:05:32+00:00"
+            "time": "2018-05-30T07:26:09+00:00"
         },
         {
             "name": "symfony/finder",
