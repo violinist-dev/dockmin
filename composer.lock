@@ -1911,16 +1911,16 @@
         },
         {
             "name": "symfony/cache",
-            "version": "v4.0.10",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "bd6d0a969c80b00630e9e2f0ab14ad4518712ec8"
+                "reference": "4986efce97c002e58380e8c0474acbf72eda9339"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/bd6d0a969c80b00630e9e2f0ab14ad4518712ec8",
-                "reference": "bd6d0a969c80b00630e9e2f0ab14ad4518712ec8",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/4986efce97c002e58380e8c0474acbf72eda9339",
+                "reference": "4986efce97c002e58380e8c0474acbf72eda9339",
                 "shasum": ""
             },
             "require": {
@@ -1945,7 +1945,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -1976,7 +1976,7 @@
                 "caching",
                 "psr6"
             ],
-            "time": "2018-05-16T09:05:32+00:00"
+            "time": "2018-05-16T14:33:22+00:00"
         },
         {
             "name": "symfony/config",
